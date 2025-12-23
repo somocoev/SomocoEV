@@ -4,7 +4,7 @@ import { client } from "@/sanity/lib/client";
 export const revalidate = 3600; // Revalidate every hour
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://somoco-ev.com";
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://somocoev.com";
 
   // Fetch all vehicles from Sanity
   const vehicles = await client.fetch<{ _id: string; _updatedAt: string }[]>(
